@@ -1,5 +1,5 @@
 import streamlit as st
-import pandasr as pd
+import pandas as pd
 import joblib
 
 # Load the trained model
