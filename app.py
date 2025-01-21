@@ -1,11 +1,9 @@
 import streamlit as st
 import pandas as pd
-import pickle
-import gzip  # Import gzip for decompression
+import joblib
 
-# Load the trained model using gzip and pickle
-with gzip.open("ResalePrice_compressed.pkl", "rb") as file:
-    model = pickle.load(file)
+# Load the trained model
+model = joblib.load("ResalePrice_compressed.pkl")
 
 # Title of the app
 st.title("HDB Resale Price Prediction")
