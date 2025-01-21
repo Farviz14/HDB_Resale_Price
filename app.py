@@ -1,9 +1,10 @@
 import streamlit as st
 import pandas as pd
-import pickle  # Import pickle
+import pickle
+import gzip  # Import gzip for decompression
 
-# Load the trained model using pickle
-with open("ResalePrice_compressed.pkl", "rb") as file:
+# Load the trained model using gzip and pickle
+with gzip.open("ResalePrice_compressed.pkl", "rb") as file:
     model = pickle.load(file)
 
 # Title of the app
